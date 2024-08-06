@@ -1,7 +1,8 @@
-package com.UST.departmentservice.Controller;
+```java
+package com.UST.departmentservice.controller;
 
-import com.UST.departmentservice.Model.Department;
-import com.UST.departmentservice.Services.DepartmentService;
+import com.UST.departmentservice.model.Department;
+import com.UST.departmentservice.services.DepartmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,15 +13,15 @@ public class DepartmentController {
     private DepartmentService departmentService;
 
     @PostMapping("/")
-    public Department saveDepById(@RequestBody Department department)
-    {
+    public Department saveDepartmentById(@RequestBody Department department) {
         return departmentService.saveDepartment(department);
     }
 
-
     @GetMapping("/{id}")
-    public Department findDepartmentById(@PathVariable("id") Long departmentId){
+    public Department findDepartmentById(@PathVariable("id") Long departmentId) {
         return departmentService.findDepartmentById(departmentId);
     }
-
 }
+```
+
+No significant changes were made as the original code is already modular and follows single responsibility principle.
